@@ -1,4 +1,4 @@
-var PORT = process.env.PORT || 5000;
+var PORT = process.env.PORT || 3000;
 const express = require('express')
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // connect mongodb database
-require('./server/database/database')();
+require('./server/database/database.js')();
 
 // setup view engine
 app.set('view engine', 'hbs');
